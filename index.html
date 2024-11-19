@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Simples</title>
+    <style>
+      body{
+        background-color: #e0f2f1;
+      }
+        /* Resetando alguns estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo da navbar */
+        .navbar {
+            background-color: #b2dfdb;
+            padding: 10px 0;
+            display: left;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Lista de links da navbar */
+        .navbar-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        /* Estilos para cada link */
+        .navbar-list li {
+            margin: 0 15px;
+        }
+
+        .navbar-list a {
+            color: #004d40;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        /* Efeito de hover nos links */
+        .navbar-list a:hover {
+            color: #cf6ad8;
+        }
+
+        footer {
+            background-color: #b2dfdb;
+            color: #00796b;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Centralização dos botões na mesma linha */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            gap: 20px; /* Espaço entre os botões */
+        }
+
+        /* From Uiverse.io by satyamchaudharydev */
+        /* From uiverse.io by @satyamchaudharydev */
+        /* Removendo estilo padrão do botão */
+
+        .form button {
+            border: none;
+            background: none;
+            color: #8b8ba7;
+        }
+
+        /* Estilizando o container do input */
+        .form {
+            --timing: 0.3s;
+            --width-of-input: 200px;
+            --height-of-input: 40px;
+            --border-height: 2px;
+            --input-bg: #;
+            --border-color: #2f2ee9;
+            --border-radius: 30px;
+            --after-border-radius: 1px;
+            position: relative;
+            width: var(--width-of-input);
+            height: var(--height-of-input);
+            display: flex;
+            align-items: center;
+            padding-inline: 0.8em;
+            border-radius: var(--border-radius);
+            transition: border-radius 0.5s ease;
+            background: var(--input-bg, #fff);
+        }
+
+        /* Estilo do Input */
+        .input {
+            font-size: 0.9rem;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            padding-inline: 0.5em;
+            padding-block: 0.7em;
+            border: none;
+        }
+
+        /* Estilizando a borda animada */
+        .form:before {
+            content: "";
+            position: absolute;
+            background: var(--border-color);
+            transform: scaleX(0);
+            transform-origin: center;
+            width: 100%;
+            height: var(--border-height);
+            left: 0;
+            bottom: 0;
+            border-radius: 1px;
+            transition: transform var(--timing) ease;
+        }
+
+        /* Hover no Input */
+        .form:focus-within {
+            border-radius: var(--after-border-radius);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        /* Animação da borda quando em foco */
+        .form:focus-within:before {
+            transform: scale(1);
+        }
+
+        /* Estilo do botão de reset (limpar) */
+        .reset {
+            border: none;
+            background: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Mostrar botão de reset quando o input não estiver vazio */
+        input:not(:placeholder-shown) ~ .reset {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Tamanho do ícone SVG */
+        .form svg {
+            width: 17px;
+            margin-top: 3px;
+        }
+
+        button {
+            max-width: 500px;
+            padding: 0.5rem 1.4rem;
+            font-size: 0.875rem;
+            line-height: 2rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            vertical-align: middle;
+            align-items: center;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            gap: 0.75rem;
+            color: rgb(65, 63, 63);
+            background-color: #fff;
+            cursor: pointer;
+            transition: all .6s ease;
+        }
+
+        .button svg {
+            height: 24px;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+        }
+        .group {
+ display: flex;
+ line-height: 28px;
+ align-items: center;
+ position: relative;
+ max-width: 190px;
+}
+
+.input {
+ width: 100%;
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: rgba(166, 60, 205, 0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgba(108, 4, 187, 0.1);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="#home">Provas</a></li>
+            <li><a href="#about">Concursos</a></li>
+            <li><a href="#services">Testes</a></li>
+            <li><a href="#contact">Gabaritos</a></li>
+        </ul>
+     </nav>
+     <center>
+     <div class="group">
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+      <input placeholder="Search" type="search" class="input">
+    </div>
+  </center>
+    <div class="button-container">
+
+        <button class="button">
+          PAS
+        </button> 
+
+        <button class="button">
+          ENEM.
+        </button>
+
+        <button class="button">
+          ENADE
+        </button>
+
+        <button class="button">
+            PROVA BRASIL
+        </button>
+
+        <button class="button">
+            SAEB
+        </button>
+    </div>
+  
+
+    <footer>
+        <p>&copy; 2024 Meu Site Personalizado | Todos os Direitos Reservados</p>
+    </footer>
+</body>
+
+</html>
